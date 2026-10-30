@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NCC UNIFORM FEES — SAIRAM VIDYALAYA, MADIPAKKAM</title>
+<meta name="description" content="SAIRAM VIDYALAYA, MADIPAKKAM — NCC UNIFORM FEES fee payment. Look up your child's UPI ID and pay via QR code." />
+<meta name="robots" content="noindex" />
+<link rel="icon" type="image/png" href="logo.png" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="logo-wrap"><img src="logo.png" alt="School logo" /></div>
+  <h1>SAIRAM VIDYALAYA, MADIPAKKAM</h1>
+  <div class="tagline">Truth • Love • Peace</div>
+  <div class="event-title">NCC UNIFORM FEES Fee Payment</div>
+</header>
+
+<main class="card">
+
+  <section id="step-search">
+    <div class="step-label"><span class="dot">1</span> Enter Student ID</div>
+    <label for="student-id">Student ID No.</label>
+    <div class="input-row">
+      <input type="text" id="student-id" placeholder="e.g. MPV26PK001" autocomplete="off" maxlength="20" />
+      <button class="btn-primary" id="search-btn">Search</button>
+    </div>
+    <div class="hint">Enter the Student ID No. exactly as given by the school office.</div>
+    <div class="error-box" id="search-error" hidden>
+      <span>&#9888;</span>
+      <span id="search-error-text">Student ID not found. Please check and try again.</span>
+    </div>
+  </section>
+
+  <section id="step-verify" hidden>
+    <div class="step-label"><span class="dot">2</span> Verify Student Details</div>
+    <div class="student-card">
+      <div class="row"><span class="k">Student ID</span><span class="v" id="v-id"></span></div>
+      <div class="row"><span class="k">Student Name</span><span class="v" id="v-name"></span></div>
+      <div class="row"><span class="k">Class</span><span class="v" id="v-class"></span></div>
+    </div>
+    <div class="verify-note">Please confirm these details match your child before proceeding to payment.</div>
+    <div class="btn-row">
+      <button class="btn-ghost" id="verify-back-btn">&larr; Not correct</button>
+      <button class="btn-primary" id="verify-confirm-btn">Confirm &amp; Proceed</button>
+    </div>
+  </section>
+
+  <section id="step-pay" hidden>
+    <div class="step-label"><span class="dot">3</span> Pay Fee</div>
+    <div class="pay-header">
+      <div class="amount" id="pay-amount"></div>
+      <div class="for-whom">NCC UNIFORM FEES Fee for <strong id="pay-name"></strong> (<span id="pay-class"></span>)</div>
+    </div>
+
+    <div class="qr-wrap"><div class="qr-box" id="qr-box"></div></div>
+
+    <div class="upi-box">
+      <span class="upi-id" id="pay-upi"></span>
+      <button class="copy-btn" id="copy-btn"><span id="copy-icon">&#128203;</span><span id="copy-label">Copy</span></button>
+    </div>
+    <div class="pay-hint">Scan the QR code with any UPI app (GPay, PhonePe, Paytm, BHIM) or copy the UPI ID above and pay manually. The amount is prefilled when scanning.</div>
+
+    <button class="btn-secondary" id="pay-back-btn">&larr; Search another student</button>
+
+    <div class="divider"></div>
+    <div class="support">
+      Facing any issue with payment?<br />
+      Contact the Manager: <a href="tel:96770 29990">96770 29990</a>
+    </div>
+  </section>
+
+</main>
+
+<div class="footer-note">
+  This is a temporary fee-collection page for SAIRAM VIDYALAYA, MADIPAKKAM's NCC UNIFORM FEES.
+  For any discrepancy in student details or UPI ID, please contact the school office
+  or the Manager at 96770 29990.
+</div>
+
+<script src="qrcode.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
